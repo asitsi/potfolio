@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Goblin+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Home_page {
+  background: linear-gradient(75deg, #ffb912 22%, #111111 20%);
+  height: 100vh;
+  width: 100%;
+}
+.Home_page_img {
+  background-image: url("../../image/front.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 80px);
+  width: 85%;
+  box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+  border-radius: 30px;
+  position: relative;
+  right: 15%;
+  top: 8%;
+}
+.Home_page .Home_page_Content {
+  position: relative;
+  top: 35%;
+  right: 12%;
+}
+.Home_page_Content div h2 {
+  color: #ffb912;
+  font-weight: 700 !important;
+  font-size: 3.7rem;
+  line-height: 1.5rem;
+}
+.Home_page_Content div h2::before {
+  content: "";
+  border-top: 3px solid #ffb912;
+  border-radius: 2px;
+  padding: 1rem;
+  position: relative;
+  top: 58px;
+  right: 15px;
+}
+.Home_page_Content div div {
+  color: #ffffff;
+  display: block;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.Post span {
+  display: none;
+}
+.Home_page p {
+  color: #ffffff;
+  line-height: 2.3rem;
+  font-size: 16.5px;
+}
+.Home_page button {
+  background: transparent;
+  padding: 0px 0px 0px 20px;
+  margin-top: 1.5rem;
+  border-radius: 35px;
+  color: #ffffff;
+  border: 1px solid #ffb912;
+  font-weight: 700 !important;
+  font-size: 15px;
+  transition: 0.7s all ease-in-out;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.Home_page button .icon {
+  margin-left: 1rem;
+  color: #ffffff;
+  background-color: #ffb912;
+  padding: 20px;
+  border-radius: 35px;
+}
+.Home_page button:hover {
+  background: #ffb912;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .Home_page {
+    background: #111111;
+    height: 100%;
+  }
+  .Home_page_img_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home_page_img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    margin-top: 20%;
+    border: 5px solid #fff;
+  }
+  .Home_page .Home_page_Content {
+    right: 0;
+    top: 0;
+    margin-top: 10%;
+  }
+  .Home_page_Content div h2 {
+    line-height: none;
+    font-size: 2rem;
+  }
+  .Home_page_Content div h2::before {
+    display: none;
+    top: 0;
+  }
+  .Home_page_Content div div {
+    font-size: 19px;
+  }
+  .Post span {
+    font-weight: 700 !important;
+    font-size: 20px;
+    display: block;
+  }
+  .Post .Post_Name {
+    display: none;
+  }
+  .Home_page p {
+    line-height: 2rem;
+    font-size: 16px;
+  }
+  .Home_page button {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display:none;
+  }
+}
