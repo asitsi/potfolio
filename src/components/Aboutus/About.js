@@ -14,6 +14,9 @@ const About = () => {
   const [Cartificats, setCartificats] = useState(Data1);
   const getYear = new Date().getFullYear();
   const age = getYear - 1997;
+  const dateFrom = new Date(2022,1,1);
+  const dateTo = new Date();
+  const experience = (dateTo.getMonth() - dateFrom.getMonth() + (12 * (dateTo.getFullYear() - dateFrom.getFullYear())))
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -113,7 +116,7 @@ const About = () => {
                   <div className="child">
                     <h1>
                       <span>
-                        3<sup>+</sup>
+                        {experience}<sup>+</sup>
                       </span>{" "}
                       Month's
                     </h1>

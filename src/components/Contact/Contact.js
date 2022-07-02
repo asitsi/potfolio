@@ -52,7 +52,12 @@ const Contact = () => {
                   >
                     <i className="fa fa-instagram" aria-hidden="true"></i>
                   </a>
+                  <a
+                    href="https://twitter.com/AsitSin37319666?s=09"
+                    target="blank"
+                  >
                   <i className="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
                   <a
                     href="https://www.youtube.com/channel/UC8SzZZpOMnsa_sdng73oemA"
                     target="blank"
