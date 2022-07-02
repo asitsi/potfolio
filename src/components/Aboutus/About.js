@@ -5,7 +5,7 @@ import EandE from "./EandE";
 import Data from "../Projects/Data";
 import Data1 from "../Cartificats/Data";
 import "./About.css";
-import resume from "../../image/Asit singh (2).pdf";
+import resume from "../../image/AsitSinghnewresume.pdf";
 import BounceLoader from "react-spinners/BounceLoader";
 
 const About = () => {
