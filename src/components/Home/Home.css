@@ -13,7 +13,7 @@
 }
 .Home_page_img {
   background-image: url("../../image/front.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   height: calc(100vh - 80px);
   width: 85%;
@@ -136,5 +136,22 @@
     margin-top: -10px;
     margin-bottom: 10px;
     display:none;
+  }
+}
+
+@media (min-width: 1910px) {
+  .Home_page {
+    background: linear-gradient(75deg, #ffb912 42%, #111111 20%);
+    height: 30vh;
+  }
+
+  .Home_page_img {
+    height: calc(30vh - 80px);
+    width: 100%;
+    position: relative;
+    right: 30%;
+    top: 50%;
+    background-size: 100% 100%;
+    transform: translate(0,-45%);
   }
 }
