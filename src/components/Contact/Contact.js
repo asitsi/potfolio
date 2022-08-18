@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Heading from "../Heading/Heading";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_93kzn84', 'template_tlcz4bg', form.current, 'AUpw_m61fgkEWedgB')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset();
+  };
+
   return (
     <Wrap>
       <div className="PageBackground py-3">
@@ -70,31 +84,21 @@ const Contact = () => {
             </div>
             <div className="col-lg-8 col-12 pt-3">
               <div className="contact_form">
-                <input
-                  onChange="this.className=(this.value=='')?'':'visited';"
-                  type="text"
-                  placeholder="YOUR NAME"
-                />
-                <input
-                  onChange="this.className=(this.value=='')?'':'visited';"
-                  type="text"
-                  placeholder="YOUR EMAIL"
-                />
-                <input
-                  onChange="this.className=(this.value=='')?'':'visited';"
-                  type="text"
-                  placeholder="YOUR SUBJECT"
-                />
-                <textarea rows="7" type="text" placeholder="Your MESSAGE" />
-                <button>
-                  SEND MESSAGE
-                  <span>
-                    <i
-                      className="fa fa-paper-plane icon"
-                      aria-hidden="true"
-                    ></i>
-                  </span>
-                </button>
+                <form ref={form} onSubmit={sendEmail}>
+                  <input placeholder="YOUR NAME" type="text" name="to_name" />
+                  <input placeholder="YOUR EMAIL" type="email" name="from_email" />
+                  <input  placeholder="YOUR SUBJECT" type="text" name="from_subject" />
+                  <textarea rows="7" placeholder="Your MESSAGE" name="message"/>
+                  <button type="submit" value="Send">
+                    SEND MESSAGE
+                    <span>
+                      <i
+                        className="fa fa-paper-plane icon"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </button>
+                </form>
               </div>
             </div>
           </div>
