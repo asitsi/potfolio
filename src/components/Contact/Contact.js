@@ -1,22 +1,31 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import Heading from "../Heading/Heading";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import BounceLoader from "react-spinners/BounceLoader";
 
 const Contact = () => {
-  const form = useRef()
+  const [loading, setLoading] = useState(false);
+  const [messege, setMessege] = useState(false);
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_93kzn84', 'template_tlcz4bg', form.current, 'AUpw_m61fgkEWedgB')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    e.target.reset();
+    setLoading(true);
+    setTimeout(() => {
+      emailjs.sendForm('service_93kzn84', 'template_tlcz4bg', form.current, 'AUpw_m61fgkEWedgB')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+      e.target.reset();
+      setLoading(false);
+      setMessege(true);
+    }, 3000);
+    
   };
 
   return (
@@ -70,7 +79,7 @@ const Contact = () => {
                     href="https://twitter.com/AsitSin37319666?s=09"
                     target="blank"
                   >
-                  <i className="fa fa-twitter" aria-hidden="true"></i>
+                    <i className="fa fa-twitter" aria-hidden="true"></i>
                   </a>
                   <a
                     href="https://www.youtube.com/channel/UC8SzZZpOMnsa_sdng73oemA"
@@ -91,17 +100,55 @@ const Contact = () => {
               <div className="contact_form">
                 <form ref={form} onSubmit={sendEmail}>
                   <input placeholder="YOUR NAME" type="text" name="to_name" />
-                  <input placeholder="YOUR EMAIL" type="email" name="from_email" />
-                  <input  placeholder="YOUR SUBJECT" type="text" name="from_subject" />
-                  <textarea rows="7" placeholder="Your MESSAGE" name="message"/>
+                  <input
+                    placeholder="YOUR EMAIL"
+                    type="email"
+                    name="from_email"
+                  />
+                  <input
+                    placeholder="YOUR SUBJECT"
+                    type="text"
+                    name="from_subject"
+                  />
+                  <textarea
+                    rows="7"
+                    placeholder="Your MESSAGE"
+                    name="message"
+                  />
                   <button type="submit" value="Send">
-                    SEND MESSAGE
-                    <span>
-                      <i
-                        className="fa fa-paper-plane icon"
-                        aria-hidden="true"
-                      ></i>
-                    </span>
+                    {loading ? (
+                      <div className="preloader">
+                        <BounceLoader
+                          color={"#ffb400"}
+                          loading={loading}
+                          size={35}
+                        />
+                      </div>
+                    ) : (
+                      <>
+                        {messege ? (
+                          <>
+                            MESSAGE SUBMITED
+                            <span>
+                              <i
+                                className="fa fa-thumbs-up icon"
+                                aria-hidden="true"
+                              ></i>
+                            </span>
+                          </>
+                        ) : (
+                          <>
+                            SEND MESSAGE
+                            <span>
+                              <i
+                                className="fa fa-paper-plane icon"
+                                aria-hidden="true"
+                              ></i>
+                            </span>
+                          </>
+                        )}
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
@@ -209,9 +256,12 @@ const Wrap = styled.div`
         padding: 20px;
         border-radius: 35px;
       }
-      :hover {
-        background: #ffb912;
-        color: #ffffff;
+      .preloader {
+        height: auto;
+        margin-right: 3.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 2.2rem;
       }
     }
   }
