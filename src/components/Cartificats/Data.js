@@ -19,7 +19,7 @@ const Data = [
   },
   {
     id: 4,
-    image: "img/Internship_Ceritficate_Health_High_Way_page.jpg",
+    image: "img/Internship_Ceritficate_Health_High_Way_page.png",
     heading: "Health Highway",
     paragraph: "",
   },
