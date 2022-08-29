@@ -11,5 +11,17 @@ const Data = [
     heading: "SkillBand",
     paragraph: "",
   },
+  {
+    id: 3,
+    image: "img/React_redux_certificate.jpg",
+    heading: "React",
+    paragraph: "",
+  },
+  {
+    id: 4,
+    image: "img/Internship_Ceritficate_Health_High_Way_page.jpg",
+    heading: "Health HighWay",
+    paragraph: "",
+  },
 ];
 export default Data;
