@@ -14,13 +14,13 @@ const Data = [
   {
     id: 3,
     image: "img/React_redux_certificate.jpg",
-    heading: "React",
+    heading: "React & Redux",
     paragraph: "",
   },
   {
     id: 4,
     image: "img/Internship_Ceritficate_Health_High_Way_page.jpg",
-    heading: "Health HighWay",
+    heading: "Health Highway",
     paragraph: "",
   },
 ];
