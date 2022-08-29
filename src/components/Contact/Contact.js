@@ -5,15 +5,27 @@ import DraftsIcon from "@material-ui/icons/Drafts";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import emailjs from "@emailjs/browser";
 import BounceLoader from "react-spinners/BounceLoader";
+//  https://script.google.com/macros/s/AKfycbw090st8U5ZYgk1iJdoTjfgvWiLPW3gkKwR-1CTNv0ynCr8wzrHYnavaCWoa_HRozMrrA/exec
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [messege, setMessege] = useState(false);
   const form = useRef();
+  const scriptUrl = process.env.REACT_APP_GOOGLE_SHEET_SCRIPT_URL;
+
 
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
+    
+    //  data save to Google sheet
+    fetch(scriptUrl, {method: 'POST', body: new FormData(form.current)})
+        .then(res => {
+            console.log("SUCCESSFULLY SUBMITTED")
+        })
+        .catch(err => console.log(err));
+
+    //  data send to email
     setTimeout(() => {
       emailjs.sendForm('service_93kzn84', 'template_tlcz4bg', form.current, 'AUpw_m61fgkEWedgB')
         .then((result) => {
@@ -24,7 +36,7 @@ const Contact = () => {
       e.target.reset();
       setLoading(false);
       setMessege(true);
-    }, 3000);
+    }, 2000);
     
   };
 
@@ -98,7 +110,7 @@ const Contact = () => {
             </div>
             <div className="col-lg-8 col-12 pt-3">
               <div className="contact_form">
-                <form ref={form} onSubmit={sendEmail}>
+                <form method="post" ref={form} onSubmit={sendEmail} name="potfolio">
                   <input placeholder="YOUR NAME" type="text" name="to_name" />
                   <input
                     placeholder="YOUR EMAIL"
