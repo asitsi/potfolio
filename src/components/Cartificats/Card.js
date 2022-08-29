@@ -40,7 +40,7 @@ const Wrap = styled.div`
       width: 320px;
       position: relative;
       background: #fff;
-      margin: 0px 1rem 1rem 0px;
+      margin: 2rem 1rem 1rem 0px;
       padding: 20px 15px 0px 15px;
       display: flex;
       flex-direction: column;
