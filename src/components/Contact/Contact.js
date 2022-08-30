@@ -5,29 +5,30 @@ import DraftsIcon from "@material-ui/icons/Drafts";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import emailjs from "@emailjs/browser";
 import BounceLoader from "react-spinners/BounceLoader";
-//  https://script.google.com/macros/s/AKfycbw090st8U5ZYgk1iJdoTjfgvWiLPW3gkKwR-1CTNv0ynCr8wzrHYnavaCWoa_HRozMrrA/exec
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [messege, setMessege] = useState(false);
   const form = useRef();
   const scriptUrl = process.env.REACT_APP_GOOGLE_SHEET_SCRIPT_URL;
+  const serviceId = process.env.REACT_APP_YOUR_SERVICE_ID;
+  const templateId = process.env.REACT_APP_YOUR_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_YOUR_PUBLIC_KEY;
 
-
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
+
     //  data save to Google sheet
-    fetch(scriptUrl, {method: 'POST', body: new FormData(form.current)})
-        .then(res => {
-            console.log("SUCCESSFULLY SUBMITTED")
-        })
-        .catch(err => console.log(err));
+    await fetch(scriptUrl, { method: "POST", body: new FormData(form.current) })
+      .then((res) => {
+        console.log("SUCCESSFULLY SUBMITTED")
+      })
+      .catch((err) => console.log(err));
 
     //  data send to email
     setTimeout(() => {
-      emailjs.sendForm('service_93kzn84', 'template_tlcz4bg', form.current, 'AUpw_m61fgkEWedgB')
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
