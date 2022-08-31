@@ -138,6 +138,7 @@ const Contact = () => {
                   <input
                     placeholder="YOUR NAME"
                     type="text"
+                    autocomplete="off"
                     name="name"
                     value={values.name}
                     onChange={handleChange}
@@ -147,6 +148,7 @@ const Contact = () => {
                   <input
                     placeholder="YOUR EMAIL"
                     type="email"
+                    autocomplete="off"
                     name="email"
                     value={values.email}
                     onChange={handleChange}
@@ -156,6 +158,7 @@ const Contact = () => {
                   <input
                     placeholder="YOUR SUBJECT"
                     type="text"
+                    autocomplete="off"
                     name="subject"
                     value={values.subject}
                     onChange={handleChange}
@@ -165,6 +168,7 @@ const Contact = () => {
                   <textarea
                     rows="7"
                     placeholder="Your MESSAGE"
+                    autocomplete="off"
                     name="message"
                     value={values.message}
                     onChange={handleChange}
@@ -291,7 +295,7 @@ const Wrap = styled.div`
       }
     }
     .errors {
-      color: red;
+      color:  #E21717;
       position: relative;
       top: -10px;
       margin-left: 1rem;
