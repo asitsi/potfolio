@@ -5,6 +5,8 @@ import DraftsIcon from "@material-ui/icons/Drafts";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import emailjs from "@emailjs/browser";
 import BounceLoader from "react-spinners/BounceLoader";
+import { useFormik } from "formik";
+import { formSchemas } from "../../schemas/formSchemas";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -15,30 +17,46 @@ const Contact = () => {
   const templateId = process.env.REACT_APP_YOUR_TEMPLATE_ID;
   const publicKey = process.env.REACT_APP_YOUR_PUBLIC_KEY;
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  const initialValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+    initialValues: initialValues,
+    validationSchema: formSchemas,
+    onSubmit: (values,action) => {
+      sendEmail();
+      action.resetForm();
+    },
+  });
+
+
+  const sendEmail = async () => {
     setLoading(true);
 
     //  data save to Google sheet
     await fetch(scriptUrl, { method: "POST", body: new FormData(form.current) })
       .then((res) => {
-        console.log("SUCCESSFULLY SUBMITTED")
+        console.log("SUCCESSFULLY SUBMITTED");
       })
       .catch((err) => console.log(err));
 
     //  data send to email
     setTimeout(() => {
-      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-      e.target.reset();
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
       setLoading(false);
       setMessege(true);
     }, 2000);
-    
   };
 
   return (
@@ -111,23 +129,48 @@ const Contact = () => {
             </div>
             <div className="col-lg-8 col-12 pt-3">
               <div className="contact_form">
-                <form method="post" ref={form} onSubmit={sendEmail} name="potfolio">
-                  <input placeholder="YOUR NAME" type="text" name="to_name" />
+                <form
+                  method="post"
+                  ref={form}
+                  onSubmit={handleSubmit}
+                  name="potfolio"
+                >
+                  <input
+                    placeholder="YOUR NAME"
+                    type="text"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  { errors.name && touched.name ? <span className="errors">{errors.name}</span> : null}
                   <input
                     placeholder="YOUR EMAIL"
                     type="email"
-                    name="from_email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                   />
+                  { errors.email && touched.email ? <span className="errors">{errors.email}</span> : null}
                   <input
                     placeholder="YOUR SUBJECT"
                     type="text"
-                    name="from_subject"
+                    name="subject"
+                    value={values.subject}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                   />
+                  { errors.subject && touched.subject ? <span className="errors">{errors.subject}</span> : null}
                   <textarea
                     rows="7"
                     placeholder="Your MESSAGE"
                     name="message"
+                    value={values.message}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                   />
+                  { errors.message && touched.message ? <span className="errors">{errors.message}</span> : null}
                   <button type="submit" value="Send">
                     {loading ? (
                       <div className="preloader">
@@ -227,6 +270,7 @@ const Wrap = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 1rem;
+      position: relative;
       :focus {
         outline: none;
         color: #fff;
@@ -246,6 +290,13 @@ const Wrap = styled.div`
         box-shadow: 0 0 0 2px #ffb912;
       }
     }
+    .errors {
+      color: red;
+      position: relative;
+      top: -10px;
+      margin-left: 1rem;
+    }
+
     button {
       background: transparent;
       padding: 0px 0px 0px 20px;
