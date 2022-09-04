@@ -28,13 +28,12 @@ const Contact = () => {
     initialValues: initialValues,
     validationSchema: formSchemas,
     onSubmit: (values,action) => {
-      sendEmail();
-      action.resetForm();
+      sendEmail(action);
     },
   });
 
 
-  const sendEmail = async () => {
+  const sendEmail = async (action) => {
     setLoading(true);
 
     //  data save to Google sheet
@@ -56,6 +55,7 @@ const Contact = () => {
       );
       setLoading(false);
       setMessege(true);
+      action.resetForm();
     }, 2000);
   };
 
@@ -138,7 +138,7 @@ const Contact = () => {
                   <input
                     placeholder="YOUR NAME"
                     type="text"
-                    autocomplete="off"
+                    autoComplete="off"
                     name="name"
                     value={values.name}
                     onChange={handleChange}
@@ -148,7 +148,7 @@ const Contact = () => {
                   <input
                     placeholder="YOUR EMAIL"
                     type="email"
-                    autocomplete="off"
+                    autoComplete="off"
                     name="email"
                     value={values.email}
                     onChange={handleChange}
@@ -158,7 +158,7 @@ const Contact = () => {
                   <input
                     placeholder="YOUR SUBJECT"
                     type="text"
-                    autocomplete="off"
+                    autoComplete="off"
                     name="subject"
                     value={values.subject}
                     onChange={handleChange}
@@ -168,7 +168,7 @@ const Contact = () => {
                   <textarea
                     rows="7"
                     placeholder="Your MESSAGE"
-                    autocomplete="off"
+                    autoComplete="off"
                     name="message"
                     value={values.message}
                     onChange={handleChange}
