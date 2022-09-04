@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Data from "./Data";
 
 const Card = () => {
-  const [item, setItem] = useState(Data);
   return (
     <Wrap>
       <div className="main_div">
-        {item.map((elem, index) => {
+        {Data.map((elem, index) => {
           return (
             <div className="card" key={index}>
               <div className="imgeffact">

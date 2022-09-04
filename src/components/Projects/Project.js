@@ -69,7 +69,7 @@ const Project = () => {
                         className="col-12 col-md-6 col-lg-6 col-xl-4"
                         key={index}
                       >
-                        <a href={link} target="_blank">
+                        <a href={link} target="_blank" rel="noreferrer">
                           <img
                             src={image}
                             alt="img"

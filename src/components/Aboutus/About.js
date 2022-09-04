@@ -3,20 +3,19 @@ import Heading from "../Heading/Heading";
 import MySkill from "./MySkill";
 import EandE from "./EandE";
 import Data from "../Projects/Data";
-import Data1 from "../Cartificats/Data";
+import CartificateData from "../Cartificats/Data";
 import "./About.css";
 import resume from "../../image/AsitSinghnewresume.pdf";
 import BounceLoader from "react-spinners/BounceLoader";
 
 const About = () => {
   const [loading, setLoading] = useState(false);
-  const [project, setProject] = useState(Data);
-  const [Cartificats, setCartificats] = useState(Data1);
   const getYear = new Date().getFullYear();
   const age = getYear - 1997;
   const dateFrom = new Date(2022,1,1);
   const dateTo = new Date();
   const experience = (dateTo.getMonth() - dateFrom.getMonth() + (12 * (dateTo.getFullYear() - dateFrom.getFullYear())))
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -59,7 +58,7 @@ const About = () => {
                       <li>
                         <span>Email :</span>
                         <span>
-                          <a href="mailto:asitsingh0@gmail.com" target="_blank">
+                          <a href="mailto:asitsingh0@gmail.com" target="_blank" rel="noreferrer">
                             asitsingh0@gmail.com
                           </a>
                         </span>
@@ -75,7 +74,7 @@ const About = () => {
                       <li>
                         <span>Phone :</span>
                         <span>
-                          <a href="tel:+916394066616" target="blank">
+                          <a href="tel:+916394066616" target="_blank" rel="noreferrer">
                             +91-6394066616
                           </a>
                         </span>
@@ -106,7 +105,7 @@ const About = () => {
                   <div className="child">
                     <h1>
                       <span>
-                        {project.length}
+                        {Data.length}
                         <sup>+</sup>
                       </span>{" "}
                       Top
@@ -136,7 +135,7 @@ const About = () => {
                   <div className="child">
                     <h1>
                       <span>
-                        {Cartificats.length}
+                        {CartificateData.length}
                         <sup>+</sup>
                       </span>{" "}
                       TOP
