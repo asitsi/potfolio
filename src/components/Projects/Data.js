@@ -9,7 +9,7 @@ const Data = [
     id: 2,
     image: "img/Corona.png",
     category: "Reactjs",
-    link: "https://github.com/asitsi/color-picker",
+    link: "https://asitsi.github.io/coronaApi/",
   },
   {
     id: 3,
@@ -48,4 +48,5 @@ const Data = [
     link: "https://asitsi.github.io/StarRating/",
   },
 ];
+
 export default Data;
