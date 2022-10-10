@@ -34,6 +34,7 @@ const Contact = () => {
 
 
   const sendEmail = async (action) => {
+    console.log(serviceId + "templateId" + templateId + "publicKey" + publicKey);
     setLoading(true);
 
     //  data save to Google sheet
