@@ -1,7 +1,7 @@
 const Data = [
   {
     id: 1,
-    image: "img/Tesla.png",
+    image: "img/Tesla.svg",
     category: "Reactjs",
     link: "https://asitsi.github.io/teslaClone/",
   },

@@ -12,7 +12,7 @@ const About = () => {
   const [loading, setLoading] = useState(false);
   const getYear = new Date().getFullYear();
   const age = getYear - 1997;
-  const dateFrom = new Date(2022,1,1);
+  const dateFrom = new Date(2021,10,1);
   const dateTo = new Date();
   const experience = (dateTo.getMonth() - dateFrom.getMonth() + (12 * (dateTo.getFullYear() - dateFrom.getFullYear())))
 

@@ -101,7 +101,7 @@ section h3 span {
   padding: 1.5rem 2rem;
 }
 .child h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #555555;
   padding: 0 0.2rem;
   text-transform: uppercase;
@@ -110,7 +110,7 @@ section h3 span {
 .child h1 span {
   color: #ffb400;
   font-weight: 800 !important;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 .child h1 span sup {
   font-size: 2rem;

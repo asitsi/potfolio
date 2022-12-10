@@ -3,6 +3,7 @@ import "./Home.css";
 import Typeical from "react-typical";
 
 function Home() {
+
   return (
     <div>
       <section className="Home_page">
