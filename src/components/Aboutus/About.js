@@ -15,6 +15,8 @@ const About = () => {
   const dateFrom = new Date(2021,6,1);
   const dateTo = new Date();
   const experience = (dateTo.getMonth() - dateFrom.getMonth() + (12 * (dateTo.getFullYear() - dateFrom.getFullYear())))
+  const expYear = Math.floor(experience / 12);
+  const expMonths = experience % 12;
 
   useEffect(() => {
     setLoading(true);
@@ -115,9 +117,9 @@ const About = () => {
                   <div className="child">
                     <h1>
                       <span>
-                        {experience}<sup>+</sup>
+                        {expYear}.{expMonths}<sup>+</sup> {/* {experience} */}
                       </span>{" "}
-                      Month's
+                      Years
                     </h1>
                     <p>experience</p>
                   </div>
