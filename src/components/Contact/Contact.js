@@ -12,7 +12,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [messege, setMessege] = useState(false);
   const form = useRef();
-  const scriptUrl = process.env.REACT_APP_GOOGLE_SHEET_SCRIPT_URL;
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxSvxoKnYizA2oiufB8rHOkVjKsfv8kf5j5uLYussW5vkFAN06M277dNIpwJ6VYQrWlrQ/exec';
   const serviceId = process.env.REACT_APP_YOUR_SERVICE_ID;
   const templateId = process.env.REACT_APP_YOUR_TEMPLATE_ID;
   const publicKey = process.env.REACT_APP_YOUR_PUBLIC_KEY;
@@ -40,10 +40,12 @@ const Contact = () => {
     await fetch(scriptUrl, { method: "POST", body: new FormData(form.current) })
       .then((res) => {
         console.log("SUCCESSFULLY SUBMITTED");
+        setLoading(false);
       })
       .catch((err) => console.log(err));
 
     //  data send to email
+    // TODO: not working check
     setTimeout(() => {
       emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
         (result) => {
