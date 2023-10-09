@@ -47,6 +47,12 @@ const Data = [
     category: "Reactjs",
     link: "https://asitsi.github.io/StarRating/",
   },
+  {
+    id: 9,
+    image: "img/OneSolutions.png",
+    category: "Reactjs",
+    link: "https://asitsi.github.io/OneSoutions/",
+  },
 ];
 
 export default Data;

@@ -41,6 +41,7 @@ const Contact = () => {
       .then((res) => {
         console.log("SUCCESSFULLY SUBMITTED");
         setLoading(false);
+        action.resetForm();
       })
       .catch((err) => console.log(err));
 
