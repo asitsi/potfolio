@@ -1,14 +1,29 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Goblin+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
 }
+
 section .heading_background {
   color: #222222;
   font-size: 6.87rem;
@@ -20,6 +35,7 @@ section .heading_background {
   margin-top: 2rem;
   text-transform: uppercase;
 }
+
 section .heading {
   text-align: center;
   font-size: 56px;
@@ -29,6 +45,7 @@ section .heading {
   position: relative;
   top: -90px;
 }
+
 section h3 span {
   color: #ffb912;
 }

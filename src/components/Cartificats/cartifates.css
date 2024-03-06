@@ -1,8 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
 }
+
 section .heading_background {
   color: #222222;
   font-size: 6.87rem;
@@ -14,6 +26,7 @@ section .heading_background {
   margin-top: 2rem;
   text-transform: uppercase;
 }
+
 section .heading {
   text-align: center;
   font-size: 56px;
@@ -23,6 +36,7 @@ section .heading {
   position: relative;
   top: -90px;
 }
+
 section h3 span {
   color: #ffb912;
 }
@@ -32,25 +46,29 @@ section h3 span {
   section .heading_background {
     display: none;
   }
+
   section .heading {
     display: none;
   }
 }
+
 @media (max-width: 768px) {
   section .heading_background {
     width: 100%;
     height: auto;
     font-size: 3.8rem;
     letter-spacing: 2px;
-    margin-top:12px;
+    margin-top: 12px;
   }
+
   section .heading {
     top: -52px;
     font-size: 30px;
   }
 }
+
 @media (max-width: 900px) {
-  section .heading_background  {
-    margin-top:100px;
+  section .heading_background {
+    margin-top: 100px;
   }
 }

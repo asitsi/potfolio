@@ -1,12 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .Aboutus {
   background: #111111;
   height: 100%;
 }
+
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
 }
+
 section h1 {
   color: #222222;
   font-size: 110px;
@@ -17,6 +30,7 @@ section h1 {
   font-family: "Goblin One", cursive;
   margin-top: 2rem;
 }
+
 section h3 {
   text-align: center;
   font-size: 56px;
@@ -26,12 +40,15 @@ section h3 {
   position: relative;
   top: -87px;
 }
+
 section h3 span {
   color: #ffb400;
 }
+
 .container h1 {
   color: #fff;
 }
+
 .PERSONAL_INFOS h1 {
   color: #fff;
   font-size: 26px;
@@ -39,19 +56,23 @@ section h3 span {
   margin-left: 1.9rem;
   font-weight: 600;
 }
+
 .PERSONAL_INFOS .row .col-6 ul li {
   list-style: none;
   margin-bottom: 1.5rem;
 }
+
 .PERSONAL_INFOS .row .col-6 ul li span:nth-child(1) {
   color: #9d9d9d;
   font-weight: 600;
 }
+
 .PERSONAL_INFOS .row .col-6 ul li span:nth-child(2) {
   color: #ffffff;
   margin-left: 0.5rem;
   font-weight: 600;
 }
+
 .PERSONAL_INFOS_a {
   background: transparent;
   padding: 0 0 0 25px;
@@ -60,16 +81,27 @@ section h3 span {
   border: 1px solid #ffb912;
   font-weight: 700 !important;
   font-size: 15px;
+  -webkit-transition: 0.7s all ease-in-out;
+  -o-transition: 0.7s all ease-in-out;
   transition: 0.7s all ease-in-out;
   font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 1px;
   margin-left: 1.5rem;
   text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
+
 .PERSONAL_INFOS a i {
   margin-left: 1rem;
   color: #ffffff;
@@ -77,19 +109,26 @@ section h3 span {
   padding: 22px;
   border-radius: 35px;
 }
+
 .PERSONAL_INFOS a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
+
 .box {
   width: 100%;
   height: auto;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 .child {
   background: transparent;
   border: 1px solid #333333;
@@ -100,6 +139,7 @@ section h3 span {
   margin-bottom: 1rem;
   padding: 1.5rem 2rem;
 }
+
 .child h1 {
   font-size: 1.3rem;
   color: #555555;
@@ -107,15 +147,18 @@ section h3 span {
   text-transform: uppercase;
   font-weight: 700;
 }
+
 .child h1 span {
   color: #ffb400;
   font-weight: 800 !important;
   font-size: 3rem;
 }
+
 .child h1 span sup {
   font-size: 2rem;
   font-weight: 500;
 }
+
 .child p {
   color: #fff;
   font-size: 1rem;
@@ -123,6 +166,7 @@ section h3 span {
   text-align: center;
   text-transform: uppercase;
 }
+
 .heading h3 {
   text-align: center;
   color: #ffffff;
@@ -131,11 +175,17 @@ section h3 span {
   font-weight: 700 !important;
   margin: 0;
 }
+
 .container .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-top: 4rem;
 }
+
 .container .Title {
   color: #ffffff;
   text-align: center;
@@ -153,11 +203,13 @@ section h3 span {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+
 .resume-box ul li {
   list-style: none;
   border-left: 1px solid #333333;
   padding-left: 2rem;
 }
+
 .resume-box ul li .icon {
   position: relative;
   top: -10px;
@@ -167,12 +219,15 @@ section h3 span {
   height: 40px;
   width: 40px;
   text-align: center;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
+
 .resume-box ul li .icon i {
   color: #ffffff;
 }
+
 .resume-box ul li .years {
   padding: 0 10px;
   position: relative;
@@ -182,6 +237,7 @@ section h3 span {
   border-radius: 20px;
   font-size: 13px;
 }
+
 .resume-box ul li h5 {
   color: #ffffff;
   position: relative;
@@ -190,12 +246,14 @@ section h3 span {
   margin: 0;
   font-weight: 700;
 }
+
 .from-place {
   color: #444444;
   /* text-transform: uppercase; */
   font-weight: 700;
   text-align: center;
 }
+
 .resume-box ul li p {
   color: #ffffff;
   position: relative;
@@ -205,6 +263,6 @@ section h3 span {
 
 @media (max-width: 900px) {
   .PERSONAL_INFOS {
-    margin-top:12px;
+    margin-top: 12px;
   }
 }
