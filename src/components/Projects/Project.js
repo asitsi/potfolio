@@ -37,24 +37,13 @@ const Project = () => {
         <div>
           <div className="container pb-3">
             <div className=" menu-tab ">
-              <button className="" onClick={() => setItem(Data)}>
-                All
-              </button>
-              <button className="" onClick={() => filterItem("Html")}>
-                HTML
-              </button>
-              <button className="" onClick={() => filterItem("Css")}>
-                CSS
-              </button>
-              <button className="" onClick={() => filterItem("JavaScript")}>
-                JAVA SCRIPT
-              </button>
-              <button className="" onClick={() => filterItem("Reactjs")}>
-                REACT JS
-              </button>
-              <button className="" onClick={() => filterItem("MERN")}>
-                MERN
-              </button>
+              <button onClick={() => setItem(Data)}>All</button>
+              <button onClick={() => filterItem("Html")}>HTML</button>
+              <button onClick={() => filterItem("Css")}>CSS</button>
+              <button onClick={() => filterItem("JavaScript")}>JAVA SCRIPT</button>
+              <button onClick={() => filterItem("Reactjs")}>REACT JS</button>
+              <button onClick={() => filterItem("Nextjs")}>NEXT JS</button>
+              <button onClick={() => filterItem("MERN")}>MERN</button>
             </div>
           </div>
           <div className="container-fluid ">

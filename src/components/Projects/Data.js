@@ -53,6 +53,12 @@ const Data = [
     category: "Reactjs",
     link: "https://asitsi.github.io/OneSoutions/",
   },
+  {
+    id: 10,
+    image: "img/CalenderEvent.png",
+    category: "Nextjs",
+    link: "https://github.com/asitsi/nextjsDashboard",
+  },
 ];
 
 export default Data;

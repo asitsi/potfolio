@@ -86,8 +86,27 @@ const MySkill = () => {
               <h2 className="Title">REACT JS</h2>
             </div>
           </div>
+          
         </div>
         <div className="row">
+        <div className="col-lg-3  col-6 column">
+            <div style={{ width: 120, height: 120 }}>
+              <CircularProgressbarWithChildren
+                value={75}
+                styles={buildStyles({
+                  pathColor: `rgba(255,210, 0, ${75 / 100})`,
+                  trailColor: "#222222",
+                  height: 100,
+                })}
+              >
+                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                <div style={{ fontSize: 20, marginTop: -10, color: "#ffffff" }}>
+                  <strong>75%</strong>
+                </div>
+              </CircularProgressbarWithChildren>
+              <h2 className="Title">NEXT JS</h2>
+            </div>
+          </div>
           <div className="col-lg-3  col-6 column">
             <div style={{ width: 120, height: 120 }}>
               <CircularProgressbarWithChildren
@@ -121,7 +140,7 @@ const MySkill = () => {
                   <strong>66%</strong>
                 </div>
               </CircularProgressbarWithChildren>
-              <h2 className="Title">EXPRESS JS</h2>
+              <h2 className="Title">GRAPHQL</h2>
             </div>
           </div>
           <div className="col-lg-3  col-6 column">
