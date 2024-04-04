@@ -14,8 +14,7 @@ function App() {
       <Helmet>
         <title>Web Development & Mobile Developer Portfolio | Asit singh</title>
         <meta property="og:title" content="Potfolio: Web Development & Mobile Developer Portfolio | Projects" />
-        <meta property="og:description" content="Explore our collection of hash and RGB colors. Simply click on any color to copy its code instantly. Discover the perfect color for your projects with ease. Start creating stunning designs now! | RGB color codes, HTML color picker, Color conversion" />
-        <meta property="og:image" content="potfolio.png" />
+        <meta name="description" content="Explore a diverse portfolio showcasing web development and mobile app projects by Your Name. From responsive web designs to feature-rich mobile applications, discover my expertise in front-end, back-end, and full-stack development. Get inspired and let's bring your next project to life together." />        <meta property="og:image" content="potfolio.png" />
       </Helmet>
       <div className="App">
         <Home />
