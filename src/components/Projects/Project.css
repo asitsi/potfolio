@@ -64,7 +64,7 @@
 
 .project_img:hover {
   -webkit-box-shadow: 5px 8px 6px #ffb400;
-  box-shadow: 5px 8px 6px #ffb400;
+  box-shadow: rgba(255, 180, 0, 0.3) 0px 19px 38px, rgba(255, 180, 0, 0.22) 0px 15px 12px;;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
