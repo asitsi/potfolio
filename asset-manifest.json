@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/potfolio/static/css/main.e1c479be.chunk.css",
-    "main.js": "/potfolio/static/js/main.c910543e.chunk.js",
-    "main.js.map": "/potfolio/static/js/main.c910543e.chunk.js.map",
+    "main.js": "/potfolio/static/js/main.adbe26cc.chunk.js",
+    "main.js.map": "/potfolio/static/js/main.adbe26cc.chunk.js.map",
     "runtime-main.js": "/potfolio/static/js/runtime-main.66cb0555.js",
     "runtime-main.js.map": "/potfolio/static/js/runtime-main.66cb0555.js.map",
     "static/css/2.679d1a01.chunk.css": "/potfolio/static/css/2.679d1a01.chunk.css",
-    "static/js/2.e6cf2508.chunk.js": "/potfolio/static/js/2.e6cf2508.chunk.js",
-    "static/js/2.e6cf2508.chunk.js.map": "/potfolio/static/js/2.e6cf2508.chunk.js.map",
+    "static/js/2.86cea575.chunk.js": "/potfolio/static/js/2.86cea575.chunk.js",
+    "static/js/2.86cea575.chunk.js.map": "/potfolio/static/js/2.86cea575.chunk.js.map",
     "index.html": "/potfolio/index.html",
     "static/css/2.679d1a01.chunk.css.map": "/potfolio/static/css/2.679d1a01.chunk.css.map",
     "static/css/main.e1c479be.chunk.css.map": "/potfolio/static/css/main.e1c479be.chunk.css.map",
-    "static/js/2.e6cf2508.chunk.js.LICENSE.txt": "/potfolio/static/js/2.e6cf2508.chunk.js.LICENSE.txt",
+    "static/js/2.86cea575.chunk.js.LICENSE.txt": "/potfolio/static/js/2.86cea575.chunk.js.LICENSE.txt",
     "static/media/AsitSinghnewresume.f40a33b5.pdf": "/potfolio/static/media/AsitSinghnewresume.f40a33b5.pdf",
     "static/media/Home.css": "/potfolio/static/media/front.24e50a5c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.66cb0555.js",
     "static/css/2.679d1a01.chunk.css",
-    "static/js/2.e6cf2508.chunk.js",
+    "static/js/2.86cea575.chunk.js",
     "static/css/main.e1c479be.chunk.css",
-    "static/js/main.c910543e.chunk.js"
+    "static/js/main.adbe26cc.chunk.js"
   ]
 }
