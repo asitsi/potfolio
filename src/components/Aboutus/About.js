@@ -5,8 +5,9 @@ import EandE from "./EandE";
 import Data from "../Projects/Data";
 import CartificateData from "../Cartificats/Data";
 import "./About.css";
-import resume from "../../image/AsitSinghnewresume.pdf";
+import resume from "../../image/AsitResume.pdf";
 import BounceLoader from "react-spinners/BounceLoader";
+import DownloadButton from "../Button/DownloadButton";
 
 const About = () => {
   const [loading, setLoading] = useState(false);
@@ -97,9 +98,8 @@ const About = () => {
                     </ul>
                   </div>
                 </div>
-                <a href={resume} download className="PERSONAL_INFOS_a mb-3">
-                  Download CV
-                  <i className="fa fa-download" aria-hidden="true"></i>
+                 <a href={resume} download >
+                  <DownloadButton />
                 </a>
               </div>
               <div className="col-lg-6 col-12">
