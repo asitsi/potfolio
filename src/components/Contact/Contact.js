@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 import BounceLoader from "react-spinners/BounceLoader";
 import { useFormik } from "formik";
 import { formSchemas } from "../../schemas/formSchemas";
+import SocialMediaIcon from "./SocialMediaIcon";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -81,9 +82,7 @@ const Contact = () => {
                   part of your visions.
                 </p>
                 <div className="contactus_section">
-                  <span>
-                    <DraftsIcon className="contactus_section_icon" />
-                  </span>
+                  <span><DraftsIcon className="contactus_section_icon" /></span>
                   <span>
                     <h6>MAIL ME</h6>
                     <a href="mailto:asitsingh0@gmail.com" target="blank">
@@ -102,32 +101,7 @@ const Contact = () => {
                     </a>
                   </span>
                 </div>
-                <div className="contactus_section_Socialicon">
-                  <a
-                    href="https://www.instagram.com/asitsingh18/"
-                    target="blank"
-                  >
-                    <i className="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                  <a
-                    href="https://twitter.com/AsitSin37319666?s=09"
-                    target="blank"
-                  >
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/UC8SzZZpOMnsa_sdng73oemA"
-                    target="blank"
-                  >
-                    <i className="fa fa-youtube" aria-hidden="true"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/asit-singh-b679b0156/"
-                    target="blank"
-                  >
-                    <i className="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                </div>
+                <SocialMediaIcon />
               </div>
             </div>
             <div className="col-lg-8 col-12 pt-3">
