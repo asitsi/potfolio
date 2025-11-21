@@ -5,7 +5,7 @@ import EandE from "./EandE";
 import Data from "../Projects/Data";
 import CartificateData from "../Cartificats/Data";
 import "./About.css";
-import resume from "../../image/AsitResume.pdf";
+import resume from "../../image/Asitsingh_Resume.pdf";
 import BounceLoader from "react-spinners/BounceLoader";
 import DownloadButton from "../Button/DownloadButton";
 

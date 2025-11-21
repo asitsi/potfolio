@@ -6,7 +6,7 @@ const Card = () => {
   return (
     <Wrap>
       <div className="main_div">
-        {Data.map((elem, index) => {
+        {[...Data].reverse().map((elem, index) => {
           return (
             <div className="card" key={index}>
               <div className="imgeffact">

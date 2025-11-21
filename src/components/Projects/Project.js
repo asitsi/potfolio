@@ -36,33 +36,33 @@ const Project = () => {
       ) : (
         <div>
           <div className="container pb-3">
-            <div className=" menu-tab ">
-              <button onClick={() => setItem(Data)}>All</button>
-              <button onClick={() => filterItem("Html")}>HTML</button>
-              <button onClick={() => filterItem("Css")}>CSS</button>
-              <button onClick={() => filterItem("JavaScript")}>JAVA SCRIPT</button>
-              <button onClick={() => filterItem("Reactjs")}>REACT JS</button>
-              <button onClick={() => filterItem("Nextjs")}>NEXT JS</button>
-              <button onClick={() => filterItem("MERN")}>MERN</button>
+            <div className="menu-tab d-flex flex-wrap justify-content-center gap-2">
+              <button className="btn btn-outline-warning btn-sm" onClick={() => setItem(Data)}>All</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("Html")}>HTML</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("Css")}>CSS</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("JavaScript")}>JAVA SCRIPT</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("Reactjs")}>REACT JS</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("Nextjs")}>NEXT JS</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("ReactNative")}>REACT NATIVE</button>
+              <button className="btn btn-outline-warning btn-sm" onClick={() => filterItem("MERN")}>MERN</button>
             </div>
           </div>
-          <div className="container-fluid ">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-11 mx-auto">
-                <div className="row my-3">
-                  {item.map((elem, index) => {
+                <div className="row g-3 my-3 justify-content-center">
+                  {[...item].reverse().map((elem, index) => {
                     const { image, link } = elem;
-
                     return (
                       <div
-                        className="col-12 col-md-6 col-lg-6 col-xl-4"
+                        className="col-12 col-sm-6 col-lg-4"
                         key={index}
                       >
-                        <a href={link} target="_blank" rel="noreferrer">
+                        <a href={link} target="_blank" rel="noreferrer" className="d-block">
                           <img
                             src={image}
                             alt="img"
-                            className="project_img img-fluid"
+                            className="project_img img-fluid w-100"
                           />
                         </a>
                       </div>

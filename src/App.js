@@ -9,6 +9,12 @@ import Contact from "./components/Contact/Contact";
 import { Helmet } from 'react-helmet';
 
 function App() {
+  const aboutRef = React.useRef(null);
+  const scrollToAbout = () => {
+    if (aboutRef && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <React.Fragment>
       <Helmet>
@@ -18,11 +24,13 @@ function App() {
         <meta property="og:image" content="potfolio.png" />
       </Helmet>
       <div className="App">
-        <Home />
-        <About />
-        <Cartificate />
-        <Projects />
-        <Contact />
+          <Home onMoreAboutClick={scrollToAbout} />
+          <div ref={aboutRef}>
+            <About />
+          </div>
+          <Cartificate />
+          <Projects />
+          <Contact />
       </div>
     </React.Fragment>
   );
