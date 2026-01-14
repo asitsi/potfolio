@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/potfolio/static/css/main.665efb6b.chunk.css",
-    "main.js": "/potfolio/static/js/main.efe78b2f.chunk.js",
-    "main.js.map": "/potfolio/static/js/main.efe78b2f.chunk.js.map",
+    "main.js": "/potfolio/static/js/main.3640b419.chunk.js",
+    "main.js.map": "/potfolio/static/js/main.3640b419.chunk.js.map",
     "runtime-main.js": "/potfolio/static/js/runtime-main.66cb0555.js",
     "runtime-main.js.map": "/potfolio/static/js/runtime-main.66cb0555.js.map",
     "static/css/2.679d1a01.chunk.css": "/potfolio/static/css/2.679d1a01.chunk.css",
-    "static/js/2.7edefee3.chunk.js": "/potfolio/static/js/2.7edefee3.chunk.js",
-    "static/js/2.7edefee3.chunk.js.map": "/potfolio/static/js/2.7edefee3.chunk.js.map",
+    "static/js/2.a501fa44.chunk.js": "/potfolio/static/js/2.a501fa44.chunk.js",
+    "static/js/2.a501fa44.chunk.js.map": "/potfolio/static/js/2.a501fa44.chunk.js.map",
     "index.html": "/potfolio/index.html",
     "static/css/2.679d1a01.chunk.css.map": "/potfolio/static/css/2.679d1a01.chunk.css.map",
     "static/css/main.665efb6b.chunk.css.map": "/potfolio/static/css/main.665efb6b.chunk.css.map",
-    "static/js/2.7edefee3.chunk.js.LICENSE.txt": "/potfolio/static/js/2.7edefee3.chunk.js.LICENSE.txt",
+    "static/js/2.a501fa44.chunk.js.LICENSE.txt": "/potfolio/static/js/2.a501fa44.chunk.js.LICENSE.txt",
     "static/media/Asitsingh_Resume.3ae9066b.pdf": "/potfolio/static/media/Asitsingh_Resume.3ae9066b.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.66cb0555.js",
     "static/css/2.679d1a01.chunk.css",
-    "static/js/2.7edefee3.chunk.js",
+    "static/js/2.a501fa44.chunk.js",
     "static/css/main.665efb6b.chunk.css",
-    "static/js/main.efe78b2f.chunk.js"
+    "static/js/main.3640b419.chunk.js"
   ]
 }
