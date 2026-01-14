@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Project";
 import Cartificate from "./components/Cartificats/Cartifates";
 import Contact from "./components/Contact/Contact";
 import { Helmet } from 'react-helmet';
+import Snowfall from 'react-snowfall'
 
 function App() {
   const aboutRef = React.useRef(null);
@@ -15,6 +16,7 @@ function App() {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const isSnowMonth = [0, 1, 8, 9, 10, 11].includes(new Date().getMonth());
   return (
     <React.Fragment>
       <Helmet>
@@ -24,6 +26,21 @@ function App() {
         <meta property="og:image" content="potfolio.png" />
       </Helmet>
       <div className="App">
+        {isSnowMonth && (
+          <Snowfall
+            color="#ffffff"
+            snowflakeCount={200}
+            style={{
+              position: "fixed",
+              width: "100vw",
+              height: "100vh",
+              top: 0,
+              left: 0,
+              zIndex: 9999,
+              pointerEvents: "none",
+            }}
+          />
+        )}
           <Home onMoreAboutClick={scrollToAbout} />
           <div ref={aboutRef}>
             <About />
